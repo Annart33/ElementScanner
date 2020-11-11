@@ -1,0 +1,209 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+
+
+    <title>Element Scanner</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2 logo">
+                    <img src="/images/logoButton.png" alt="Element Scanner Logo">
+                </div>
+                <div class="col-xs-10 title">
+                    <h2 class='extention-title'>Element Scanner</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="section">
+            <div class="inner slide step-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <form class="form" action="" id="enterSelectorForm">
+                                <div class="field">
+                                    <small></small>
+                                    <input type="text" name="selector" id="main-selector" placeholder="Selector">
+                                    <label for="main-selector">Enter main pattern selector</label>
+                                </div>
+                                <button class="btn start">Start Scan</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner step-2">
+                <div class="container">
+                    <div class="elements-wrapper">
+                        <div class="row iframe-elm">
+                            <div class="col-xs-1"> <img src="images/chekckmark.png" class="check" alt="Check mark">
+                            </div>
+                            <div class="col-xs-5">
+                                <div class='totalDesc'>Found a total of</div>
+                            </div>
+                            <div class="col-xs-6 element-count">
+                                <div class="clickable"><span></span> Iframe elements <i class='arrow closed'></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row iframe-elm">
+                            <div class="col-xs-12">
+                                <ul class="sub-categories">
+                                    <li class="element-count-type1">
+                                        <div><span></span> Video iframes</div>
+                                    </li>
+                                    <li class="element-count-type2">
+                                        <div><span></span> Map iframes</div>
+                                    </li>
+                                    <li class="element-count-type3">
+                                        <div><span></span> Captcha iframes</div>
+                                    </li>
+                                    <li class="element-count-type4">
+                                        <div><span></span> Other iframes</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row svg-elm">
+                            <div class="col-xs-1"> <img src="images/chekckmark.png" class="check" alt="Check mark">
+                            </div>
+                            <div class="col-xs-5">
+                                <div class='totalDesc'>Found a total of</div>
+                            </div>
+                            <div class="col-xs-6 element-count">
+                                <div class="clickable"><span></span> SVG elements <i class='arrow closed'></i></div>
+                            </div>
+
+                        </div>
+
+                        <div class="row svg-elm">
+                            <div class="col-xs-12">
+                                <ul class="sub-categories">
+                                    <li class="element-count-type1">
+                                        <div><span></span> SVG tags</div>
+                                    </li>
+                                    <li class="element-count-type2">
+                                        <div><span></span> SVG icons</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row pdf-elm">
+                            <div class="col-xs-1"> <img src="images/chekckmark.png" class="check" alt="Check mark">
+                            </div>
+                            <div class="col-xs-5">
+                                <div class='totalDesc'>Found a total of</div>
+                            </div>
+                            <div class="col-xs-6 element-count">
+                                <div><span></span> PDF documents</div>
+                            </div>
+                        </div>
+
+                        <div class="row canvas-elm">
+                            <div class="col-xs-1"> <img src="images/chekckmark.png" class="check" alt="Check mark">
+                            </div>
+                            <div class="col-xs-5">
+                                <div class='totalDesc'>Found a total of</div>
+                            </div>
+                            <div class="col-xs-6 element-count">
+                                <div><span></span> Canvas tags</div>
+                            </div>
+                        </div>
+
+                        <div class="row video-elm">
+                            <div class="col-xs-1"> <img src="images/chekckmark.png" class="check" alt="Check mark">
+                            </div>
+                            <div class="col-xs-5">
+                                <div class='totalDesc'>Found a total of</div>
+                            </div>
+                            <div class="col-xs-6 element-count">
+                                <div><span></span> Video tags</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-filters">
+                        <div class="row">
+                            <div class="col-xs-8">
+                                <input type="checkbox" class="hidden-box" id="home-page" checked />
+                                <label for="home-page" class="check--label">
+                                    <span class="check--label-box checked customTooltip"><span
+                                            class="tooltiptext">Select to include elements outside of main pattern</span></span>
+                                    <span class="check--label-text">Home Page</span>
+                                </label>
+                                <input type="checkbox" class="hidden-box" id="save" checked />
+                                <label for="save" class="check--label">
+                                    <span class="check--label-box checked customTooltip">
+                                        <span class="tooltiptext">Deselect if you don't want this URL to appear in final
+                                            list</span>
+                                    </span>
+                                    <span class="check--label-text">Save URL</span>
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <button class="btn stop-scan">Stop Scan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="inner step-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <textarea class="FakeTextArea" id="foundElements"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 text-left">
+                            <button class="btn" id="copyText">Copy text</button>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                            <button class="btn" id="finishSession">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <span>&copy Created by <a target="_blank" href="https://annadmytriv.netlify.app/">Anna Dmytriv</a></span>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <span>All icons by <a target="_blank" href="https://icons8.com">Icons8</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="popup.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

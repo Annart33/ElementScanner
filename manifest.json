@@ -1,0 +1,31 @@
+{
+    "name": "elementScanner",
+    "version": "1.0",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "index.html",
+        "default_title": "Element Scanner",
+        "default_icon": "images/logoButton.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "cookies",
+        "tabs",
+        "<all_urls>",
+        "storage"
+    ]
+}
